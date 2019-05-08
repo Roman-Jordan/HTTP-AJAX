@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
+
 export const Friends = styled.div`
 
     *{box-sizing:border-box;}
     display:flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
+    max-width:100rem;
+    margin: 5rem auto;
+
 `;
 
 export const Friend = styled.div`
@@ -16,7 +20,7 @@ export const Friend = styled.div`
     display:flex;
     padding:2px;
     img{
-        width:30%;
+        min-width:30%;
         background:#ddd;
         height:100%;
     }
@@ -31,4 +35,24 @@ export const Friend = styled.div`
         padding:20px;
     }
     
+`;
+
+export const SAddFriend = styled.div`
+a{
+    text-decoration:none;
+    text-align:center;
+    position:fixed;
+    top:10px;
+    right:10px;
+    height:4rem;
+    width:4rem;
+    border:none;
+    border-radius:50%;
+    padding:.5rem;
+    background:forestgreen;
+    color:#fff;
+    font-size:3rem;
+}
+
+
 `;

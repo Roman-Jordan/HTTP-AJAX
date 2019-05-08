@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import FriendsList from './components/Friends/Friends';
+import AddFriend from './components/Friends/AddFriend'
 import axios from 'axios';
 
 export default class App extends React.Component{
@@ -17,7 +18,14 @@ export default class App extends React.Component{
   
   render(){
     return (
-      <Route exact path='/' render={props => <FriendsList {...props} friends={this.state.friends} />}/>
+      <>
+      <header>
+        <h1>My Friends</h1>
+        <Route path='/' render={props => <AddFriend />}/>
+      </header>
+      <Route path='/?:id' render={props=><AddFriend />}/>
+      <Route path='/' render={props => <FriendsList {...props} friends={this.state.friends} />}/>
+      </>
     )
   }
 }
