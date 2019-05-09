@@ -4,11 +4,11 @@ import {Friend} from './styleFriends';
 export default function(props){
     return (
         <Friend>
-            <img alt={props.friend.name}/>
+            <img src='https://loremflickr.com/320/240' alt={props.friend.name}/>
             <div>
-                <h2>Name: {props.friend.name}</h2>
+                <h2>{props.friend.name}</h2>
                 <p>{props.friend.email}</p>
-                <p>{props.friend.age}</p>
+                <p>age: {props.friend.age}</p>
             </div>
         </Friend>
     )

@@ -4,8 +4,7 @@ import {Friends} from './styleFriends';
 
 
 export default function FriendsList(props){
-    console.log(props.friends);
-    
+ 
     return(
         <>
         
